@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMY</title>
+    <style>
+    /*1*/
+        part1 {
+            background-image: url("https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/ZzgbPHidO379.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .menu table {
+            border-collapse: collapse;
+        }
+        .menu th {
+            color: white;
+            padding: 10px 16px;
+            margin-bottom: 0;
+        }
+        .menu th:nth-child(3) {
+            color: black;
+            background-color: rgb(231, 17, 67);
+        }
+        .title {
+            color: white;
+            font-size: 100px;
+            font-weight: bolder;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .title span {
+            font-style: italic;
+            font-weight: 100;
+        }
+    /*2*/
+        .welcomecard {
+            margin-top: 30px;
+            position: absolute;
+            left: 130px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            height: 55%;
+            width: 80%;
+        }
+        .ico-play1 {
+            position: relative;
+            float: left;
+            width: 40%;
+            height: 100%;
+        }
+        .welcome {
+            float: right;
+            width: 50%;
+            height: 80%;
+            font-size: large;
+        }
+        .button {
+            background-color:rgba(240, 40, 110, 0.984);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+            position:absolute;
+            left: 150px;
+            top: 70%;
+        }
+        .divide {
+            width: 100%;
+            height: 50vh;
+            background-color: white;
+            margin: 30px;
+        }
+    /*3*/
+        .threedivision {
+            margin-top: 30px;
+            background-color: white;
+            top: 160vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            height: 40vh;
+        }
+        part3 a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 200;
+            background-color: black;
+            width: 20%;
+            height: 40px;
+            margin: 0 auto;
+        }
+    /*4*/
+        part4 {
+            margin-bottom: 0;
+        }
+    /*5*/
+        part5 h4 {
+            margin: 0;
+            text-align: center;
+            background-color: grey;
+            color: white;
+        }
+        .peoplecard {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin:0 auto;
+            width: 80%;
+            height: 80%;
+        }
+        .peoplecard img {
+            width: 7%;
+            height: 17%;
+            margin: 0 auto;
+        }
+        .view {
+            text-align: center;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0 auto;
+        }
+        ul.pagination li {
+            display: inline;
+        }
+        ul.pagination li a {
+            color: gray;
+            font-weight: bold;
+            font-size: larger;
+            padding: 0 10px;
+            text-decoration: none;
+        }
+        ul.pagination li a.active {
+            background-color: white;
+            color: black;
+        }
+        ul.pagination li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    /*6*/
+        part6 h4 {
+            text-align: center;
+        }
+        part6 a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background-color: rgba(70, 63, 44, 0.897);
+            color: white;
+            font-weight: 200;
+            width: 20%;
+            height: 40px;
+            margin: 0 auto;
+        }
+        .productscard{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .products1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .products2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .products1 img {
+            width: 30%;
+            margin: 10px;
+        }
+        .products2 img {
+            width: 30%;
+            margin: 10px;
+        }        
+    /*7*/
+        part7 {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+        .newcard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            margin: 25px;
+        }
+        part7 a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background-color: rgba(232, 35, 98, 0.897);
+            color: white;
+            font-weight: 200;
+            width: 20%;
+            height: 40px;
+            margin: 0 auto;
+        }
+    /*8*/
+        part8 {
+            background-image: url("https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/u=2841084098,2707058765&fm=27&gp=0.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+        part8 table {
+            border-collapse: collapse;
+            align-items: center;
+            width: 40%;
+            height: 50%;
+            position: absolute;
+            top: 8px;
+        } 
+    /*9*/
+        footer {
+            background-color: rgb(76, 71, 71);
+            color: rgb(175, 178, 175);
+            text-align: center;
+            padding: 10px;
+        }  
+    </style>
+</head>
+<body>
+    <!--1-->
+    <part1>
+    <div class="menu">
+        <table>
+            <tr>
+                <th>新品推荐</th>
+                <th>在线购买产品</th>
+                <th><span style="font-size:larger; font-style: italic;float: left;font-weight: bolder;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LAMY</span><br><span style="font-size: small;float: right;">&nbsp;&nbsp;&nbsp;Design.Made&nbsp;in&nbsp;Germany.</span></th>
+                <th>企业礼包</th>
+                <th>品牌介绍</th>
+            </tr>
+        </table>
+    </div>
+    <div class="title">
+        <span>The</span> BEST <span>pen is<br>just</span> LAMY
+    </div>
+    </part1>
+    <!--2-->
+    <part2>
+        <div class="welcomecard" style="border-color: khaki;">
+            <img class="ico-play1" width="200px" height="300px" src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E5%9B%BE%E5%B1%82%205.png" />
+            <div class="welcome">
+                <h2>Welcome to Lamy</h2>
+                <p>德国书写工具品牌LAMY始创人C·JosefLamy于1930年在海德堡创立了欧瑟斯墨水笔制造厂.1952年,崭露头角的LAMY流线型墨水笔,震撼问世,彰显公司的创新敏锐触觉。1966年终于打</p>
+                <p>造出令人耳目一新的现代经典之作-LAMY2000系列。产品撮合了聚碳酸酯与不锈钢材质,绝妙的配搭,使之从芸芸众生的书写工具中脱颖而出,时至今日,依然在市场具有影响力。</p>
+            </div>
+            <div class="button">
+                <button><img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E6%92%AD%E6%94%BE.png"/></button>
+            </div>        
+    </part2>
+    <div class="divide"></div>
+    <!--3-->
+    <part3>
+        <div class="threedivision">
+            <h1 style="text-align: center;">LAMY<span style="font-weight: 300;">各系列</span></h1>
+            <table>
+                <tr>
+                    <th>【恒星系列墨水笔】</th>
+                    <th>【狩猎系列限量色墨水笔】</th>
+                    <th>【喜悦系列美术笔】</th>
+                </tr>
+                <tr>
+                    <td>LAMY恒星系列延续了LAMY<br>的时尚造型,打造出锦上添花的极致品质，<br>此系列全部均由氧化<br>独特的凹陷式笔握以及弹性铜线笔夹<br>丰富的颜色让LAMY恒星系列突破了传统<br>散发着无限的青春魅力。</td>
+                    <td>色彩丰富,颜色亮丽,不仅是可以作为书<br>写工具,同样是很好的装饰品<br>宽大的笔夹设计,可随时夹在包带、牛仔裤、<br>T恤袖口上,让您感受创意方便的携带方式<br>笔身通体材质采用车用强力ABS材料</td>
+                    <td>用以绘图、写艺术字、艺术签名<br>扁平状的笔尖设计,适合书写艺术字<br>立体感极佳.1、1.5、1.9三种笔尖可供选择,<br>可书写粗细不等的立体字,让您随时<br>感受变化的乐趣复古的笔杆设计,<br> ,显示出独特的欣赏品味</td>
+                </tr>
+            </table>
+        </div>
+        <a href="LAMY.html" style="margin-top: 10vh;">了解详情&nbsp;&nbsp;>></a>
+    </part3>
+    <!--4-->
+    <part4>
+        <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/p24964204.png" width="100%" height="50%"/>
+    </part4>
+    <!--5-->
+    <part5>
+        <h4>
+            <b style="font-style:oblique; font-size:x-small;font-weight: 200;">Form Germany</b>
+            <br>
+            <b>What people are saying?</b>
+        </h4>
+        <div class="peoplecard">
+            <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E6%A4%AD%E5%9C%86%202.png" />
+            <div class="view" style="font-size: small;">
+                <p>使用令人难以置信的生产技术和坚持极高水平的精准要求，仅使用一种<br>材质，也足以成就出这款永恒的设计。产品本身体现了不同的加工程序和<br>制造工艺。手工打磨的亚光拉丝表面充分体现了品牌对细节的注重。</p>
+            </div>
+            <ul class="pagination">
+                <li><a class="active" href="#">-</a></li>
+                <li><a href="#">-</a></li>
+                <li><a href="#">-</a></li>
+            </ul>
+        </div>
+    </part5>
+    <!--6-->
+    <part6>
+        <h4>
+            <i style="font-size:x-small;font-weight: 200;">Choose</i>
+            <br>
+            <b>Our products</b>
+        </h4>
+        <div class="productscard">
+            <div class="products1">
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/u=3968571395,2372439321&fm=27&gp=0.png"/>
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/LAMY_joy.png"/>
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/u=3725517664,3071040087&fm=27&gp=0.png"/>
+            </div>
+            <div class="products2">
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/OgfkOenS7NfO.png"/>
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/5607d2c6d46d4db38722a3e03254de32.png"/>
+                <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/053a74e10bb650f5a2a11aaabc08422f.png"/>
+            </div>
+        </div>
+        <a href="LAMY.html">戳我速购&nbsp;&nbsp;>></a>
+    </part6>
+    <!--7-->
+    <part7>
+        <div class="newcard">
+            <table>
+                <tr>
+                    <th><img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/0230ac71b7bd3abcaa8d479e9196cdee.png"/></th>
+                    <th style="font-family:fantasy; font-style: italic;font-weight: 100;">You make millions of decisions that is<br>mean nothing,and then one day your<br>order takes out life.</th>
+                </tr>
+                <tr>
+                    <th><img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/c709a77f7264b7a03b926a162ed2126a.png"/>
+                    </th>
+                    <th style="font-family:fantasy; font-style: italic;font-weight: 100;">It's sad when you realize you aren't<br>is as important to someone as you<br>thought you were.</th>
+                </tr>
+                <tr>
+                    <th><img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/a759229c3ba7c2bbf1ac6fc9289572cb.png"/></th>
+                    <th style="font-family:fantasy; font-style: italic;font-weight: 100;">Love is unequal,so don't count how<br>much one contributes,and which is<br>more active.</th>
+                </tr>
+            </table>
+        </div>
+        <a href="LAMY.html">新品推荐&nbsp;&nbsp;>></a>
+    </part7>
+    <!--8-->
+    <part8>
+        <table>
+            <tr>
+                <th style="font-size: xx-small;">&nbsp;<br>CUTE<br>useful</th>
+                <th style="font-size: xx-large;color: rgb(178, 176, 176);height: 100px;"><h1>LAMY</h1></th>
+                <th style="font-size: xx-small;">&nbsp;<br>GOOD<br>SIMPLE</th>
+            </tr>
+        </table>
+    </part8>
+    <!--9-->
+    <footer>
+        <span style="font-size: xx-small;">&copy;</span> 凌美中国 2015 版权所有 不得转载
+    </footer>
+</body>
+</html>
