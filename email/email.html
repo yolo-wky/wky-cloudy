@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yundinemail</title>
-    <link rel="stylesheet" href="email.css" >
-    <link rel="stylesheet" href="./font_12.4/iconfont.css" >
+    <link rel="stylesheet" href="email.css">
+    <link rel="stylesheet" href="./font_12.4/iconfont.css">
 </head>
+
 <body>
     <div class="body">
         <div class="container">
             <!-- 头部-->
             <div class="header">
                 <div class="welcome">
-                    <img src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2_06.jpg"/>&nbsp;&nbsp;&nbsp;
+                    <img
+                        src="https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2_06.jpg" />&nbsp;&nbsp;&nbsp;
                     <h1>欢迎回来</h1>
                 </div>
-                <a href="https://infinitynikki.nuanpaper.com/home" target="_blank" rel="noopener noreferrer" title="Nikki">
-                <span class="iconfont icon-user"></span>
+                <a href="https://infinitynikki.nuanpaper.com/home" target="_blank" rel="noopener noreferrer"
+                    title="Nikki">
+                    <span class="iconfont icon-user"></span>
                 </a>
             </div>
             <!-- 栏目-->
@@ -33,80 +37,65 @@
                 <h1>邮箱动态-收件箱</h1>
                 <div class="receive-pic">
                     <button>
-                    <span class="iconfont icon-shouye"></span>
+                        <span class="iconfont icon-shouye"></span>
                     </button>
                     <button>
-                    <span class="iconfont icon-video"></span>
+                        <span class="iconfont icon-video"></span>
                     </button>
                 </div>
             </div>
             <!-- 邮件-->
             <div class="content">
                 <ul class="list">
-                    <li><a href="https://infinitynikki.nuanpaper.com/home"><span class="iconfont icon-caidan"></span></a></li>
+                    <li><a href="https://infinitynikki.nuanpaper.com/home"><span
+                                class="iconfont icon-caidan"></span></a></li>
                     <li><a class="active" href="#"><span class="iconfont icon-caidan"></span></a></li>
                 </ul>
                 <div class="email">
-                    <div class="p">
-                        <span class="iconfont icon-tuzidatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="#">回复</a>
-                    </div>
-                    <div class="p">
-                        <span class="iconfont icon-maomaodatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="https://infinitynikki.nuanpaper.com/home">回复</a>
-                    </div>
-                    <div class="p">
-                        <span class="iconfont icon-gougoudatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="#">回复</a>
-                    </div>
-                    <div class="p">
-                        <span class="iconfont icon-qingwadatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="#">回复</a>
-                    </div>
-                    <div class="p">
-                        <span class="iconfont icon-xiaozhudatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="#">回复</a>
-                    </div>
-                    <div class="p">
-                        <span class="iconfont icon-xiaolaoshudatoutie"></span>
-                        <span>邮件缩略信息...</span>
-                        <span>2024.12.4</span>
-                        <a href="#">删除</a>
-                        <a href="#">回复</a>
-                    </div>
                 </div>
                 <button class="write">去写信</button>
             </div>
             <!-- 底部-->
             <div class="footer">
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
-                <span class="iconfont icon-xiushi1"></span>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 </body>
+<script>
+    let a = prompt("请输入我组长最帅");
+        while(1) {
+            if (a !== '我组长最帅') {
+                a = prompt("请输入我组长最帅")
+            } else {
+                break;
+            }
+        }
+    let data = ["icon-tuzidatoutie", "icon-gougoudatoutie", "icon-xiaolaoshudatoutie", "icon-qingwadatoutie", "icon-xiaozhudatoutie"]
+    function wkyCycle(className, content) {
+        document.querySelector(className).innerHTML += content;
+    }
+    for (let i = 0; i < 100; i++) {
+        wkyCycle('.email', `<div class="p">
+                        <span class="iconfont ${data[i % 5]}"></span>
+                        <span>邮件缩略信息...</span>
+                        <span>2024.12.${i}</span>
+                        <a href="#" class="delete">删除</a>
+                        <a href="#">回复</a>
+                    </div>`);
+    }
+    document.querySelectorAll('.delete').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+        });
+    });
+    for (let i = 0; i < 10; i++) {
+        wkyCycle('.footer', `<span class="iconfont icon-xiushi1"></span>
+`);
+    }
+    document.querySelector('.body').addEventListener('click', () => {
+         window.open('https://infinitynikki.nuanpaper.com/home', '_blank');
+    })
+</script>
+
 </html>
