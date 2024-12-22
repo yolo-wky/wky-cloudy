@@ -1,0 +1,434 @@
+.body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    height: 4674px;
+}
+@media screen and (max-width: 768px) {
+  .body {
+    width: auto;
+    padding: 0 20px;
+  }
+}/* 这个不知道为啥用了还是有滚动条 */
+a {
+    text-decoration: none;
+}
+h1,p,h2,h3,ins,h4 {
+    color: rgb(13, 78, 13);
+}
+/* 1 */
+.part1 {
+    width: 100%;
+    height: 929px;
+    background-image: url(https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E4%B9%8C%E9%BE%9F.png);
+    position: relative;
+}
+.column {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column a {
+    cursor: pointer;
+    margin: 0 30px;
+}
+.column span {
+    font-size: xx-large;
+}
+.column span:hover {
+    font-size: 20px;
+}
+.camera {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 860px;
+    right: 860px;
+    cursor: pointer;
+    transition: width 0.5s, height 0.5s;
+}
+.camera span {
+    font-size: 150px;
+}
+.camera:hover {
+    background-color: aquamarine;
+    width: 190px;
+    height: 190px;
+}
+
+.part1 h1{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    font-size: 60px;
+    font-weight: 400;
+}
+.part1 p {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    font-size: 30px;
+}
+
+.explore {
+    background-color: rgb(23, 107, 27);
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 600px;
+    left: 400px;
+}
+
+.fly {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: serif;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-image: url(https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E7%81%AB%E7%83%88%E9%B8%9F1.png);
+    position: absolute;
+    top: 750px;
+    left: 400px;
+    width: 333px;
+    height: 500px;
+    transition: top 0.5s;
+}
+.love {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: serif;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-image: url(https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E7%81%AB%E7%83%88%E9%B8%9F2.png);
+    position: absolute;
+    top: 750px;
+    left: 800px;
+    width: 333px;
+    height: 500px;
+    transition: top 0.5s;
+}
+.stand {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: serif;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-image: url(https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E7%81%AB%E7%83%88%E9%B8%9F3.png);
+    position: absolute;
+    top: 750px;
+    left: 1200px;
+    width: 333px;
+    height: 500px;
+    transition: top 0.5s;
+}
+.fly:hover,
+.love:hover,
+.stand:hover {
+    top: 700px;
+}
+/*2*/
+.part2 {
+    width: 100%;
+    height: 760px;
+    background-image: url(https://wky18434353947.oss-cn-beijing.aliyuncs.com/img/%E9%B9%BF.png);
+    margin-top: 600px;
+    position: relative;
+}
+.sign {
+    background-color: lightgray;
+    width: 946px;
+    height: 541px;
+    position: absolute;
+    top: -150px;
+    left: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s;
+}
+.sign:hover {
+    top: -200px;
+}
+.sign p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px;
+}
+.signup {
+    background-color: rgb(23, 107, 27);
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: all 0.5s;
+}
+.signup:hover {
+    width: 190px;
+    height: 50px;
+    font-size: larger;
+}
+/*3*/
+.part3 {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.part3 h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 720px;
+    width: 470px;
+    height: 100px;
+    font-size: 60px;
+    font-weight: 500;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    transition: border-top 1s,border-right 2s,border-bottom 3s,border-left 4s;
+}
+.part3 h2:hover {
+    border-top: 10px solid forestgreen;
+    border-right: 10px solid forestgreen;
+    border-bottom: 10px solid forestgreen;
+    border-left: 10px solid forestgreen;
+}
+
+.difference {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 470px;
+    height: 100px;
+}
+.horse {
+    background-color: rgb(232, 235, 237);
+    width: 264px;
+    height: 413px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left:220px;
+    transition: all 0.5s;
+}
+.kangaroo {
+    background-color: rgb(232, 235, 237);
+    width: 264px;
+    height: 413px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 620px;
+    transition: all 0.5s;
+}
+.lion {
+    background-color: rgb(232, 235, 237);
+    width: 264px;
+    height: 413px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 1020px;
+    transition: all 0.5s;
+}
+.hummingbird {
+    background-color: rgb(232, 235, 237);
+    width: 264px;
+    height: 413px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 1420px;
+    transition: all 0.5s;
+}
+.horse:hover,
+.kangaroo:hover,
+.lion:hover,
+.hummingbird:hover {
+    top: 250px;
+}
+/* 4 */
+.part4 {
+    width: 100%;
+    height: 1500px;
+    position: relative;
+}
+.part4 h3 {
+    font-size: 40px;
+    font-weight: 500;
+    border: 2px solid rgb(16, 112, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 720px;
+    width: 470px;
+    height: 100px;
+    transition: all 0.5s;
+}
+.part4 h3:hover {
+    background-color: rgb(16, 112, 42);
+    color: white;
+}
+.photo {
+    position: absolute;
+    top: 200px;
+    display: flex;
+}
+.photo img {
+    position: absolute;
+    left: 200px;
+    top: 150px;
+}
+.text {
+    width: 2000px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.title {
+    color: rgb(13, 78, 13);
+    font-size: 40px;
+    font-weight: 600;
+    transition: all 0.5s;
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+}
+.title:hover {
+    top: 50px;
+}
+.content {
+    color: rgb(13, 78, 13);
+    font-size: 30px;
+    font-weight: 350;
+    transition: all 0.5s;
+    position: absolute;
+    top: 200px;
+    left: 1000px;
+}
+.content:hover {
+    font-size: 40px;
+}
+.text span {
+    font-size: 60px;
+}
+.one {
+    position: absolute;
+    top: 500px;
+    left: 1000px;
+    color: rgb(13, 78, 13);
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.two {
+    position: absolute;
+    top: 700px;
+    left: 1000px;
+    color: rgb(13, 78, 13);
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.three {
+    position: absolute;
+    top: 900px;
+    left: 1000px;
+    color: rgb(13, 78, 13);
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.four {
+    position: absolute;
+    top: 1100px;
+    left: 1000px;
+    color: rgb(13, 78, 13);
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover {
+    left: 1200px;
+}
+/* footer */
+.footer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.say1 {
+    font-size: 50px;
+    color: rgb(13, 78, 13);
+    margin-left: 400px;
+}
+.say2 {
+    font-size: 30px;
+    color: rgba(50, 146, 50, 0.622);
+    margin-left: 80px;
+}
+.bigworld {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    background-color: rgba(83, 201, 83, 0.482);
+    position: absolute;
+    left: 1200px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.bigworld:hover {
+    transform: translateY(-50px);
+    background-color: #fff;
+    color: silver;
+}
