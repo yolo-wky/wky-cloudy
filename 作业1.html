@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 2500px;
+            height: 1500px;
+            margin: 0 auto;
+        }
+        input {
+            outline-style: none;
+            border: 1px solid #c0c4cc;
+            border-radius: 5px;
+            width: 300px;
+            height: 30px;
+            padding: 1px 5px;
+            box-sizing: border-box;
+            font-family: "Microsoft soft";
+        }
+        input:focus {
+            border-color: pink;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), pink;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), pink;
+        }
+    </style>
+</head>
+<body>
+    <p>请输入一个字符串：</p>
+    <input type="text" class="string"></input>
+    <p>请输入一个子串：</p>
+    <input type="text" class="sonstring"></input>
+    <button>提交</button>
+    <p>子串出现的次数是：</p>
+    <p class="count"></p>
+
+    <script>
+        "Use strict"
+        let string = document.querySelector('.string');
+        let sonString = document.querySelector('.sonstring');
+        let btn = document.querySelector('button');
+        btn.onclick = function(){
+            let str = string.value;
+            let sonStr = sonString.value;
+            let count = str.split(sonStr).length - 1;
+            document.querySelector('.count').innerHTML = count;
+        }
+    </script>
+</body>
+</html>
