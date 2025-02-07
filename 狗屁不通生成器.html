@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入 axios 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <button>一键生成</button>
+    <div id="essay"></div>
+
+    <script>
+        "use strict"
+        let btn = document.querySelector('button');
+        btn.onclick = function(){
+            axios({
+                method: 'get',
+                url: "http://jsonplaceholder.typicode.com/posts"
+            }).then(function(response){
+                console.log(response);
+                document.querySelector('#essay').innerHTML = response.data[0].body;
+            }).catch(function(error){
+                console.log(error);
+            }).finally(function(){
+            });
+        }
+ 
+    </script>
+</body>
+</html>
