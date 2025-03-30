@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳖加辣</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <style>
+        .basic{
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <div id="root">
+        <input type="text" v-model="word"/> 
+        <h1>你要输入的单词是：{{word}}</h1>
+        <button @click="add" @keyup.enter="add" v-show="!a">添加</button>
+        <button @click="del">删除</button>
+
+        <div class="list" :class="{basic:words.length>4}">
+            <div class="warning" v-show="a">鳖加辣！单词数量太多了</div>
+            <div class="tip">单词列表：</div>
+            <div class="item" v-for="(item,index) in words" :key="index">{{item}}</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // 阻止vue在启动时生成生产提示
+        Vue.config.productionTip = false;
+
+        // 创建Vue实例
+        new Vue({
+            el: '#root', 
+            data:{ 
+                word:'',
+                words:[],
+                item:'',
+                index:0,
+                a:false
+            },
+            methods:{
+                add(){
+                    this.words.push(this.word)
+                    this.word = ''
+                },
+                del(){
+                    this.words.pop()
+                }
+            },
+            watch:{
+                words(){
+                    if(this.words.length>4){
+                        this.a = true
+                    }else{
+                        this.a = false
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>
